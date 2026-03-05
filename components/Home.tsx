@@ -35,7 +35,7 @@ export default function Home() {
       </div>
       <Program />
 
-      <Calendar year={2026} month={6} highlightDay={12} />
+      <Calendar year={2026} month={6} highlightDay={22} />
 
       {/* text info */}
       <section className="text-center bg-white text-[#1b1b1b]  px-2 py-8">

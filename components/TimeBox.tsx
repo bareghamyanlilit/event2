@@ -1,5 +1,4 @@
 import { anim } from "@/data/data";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const weddingDate: any = new Date("2026-06-17T12:00:00");
@@ -35,10 +34,10 @@ export function TimeBox() {
   }, []);
   return (
     <section className=" flex flex-col gap-5 text-center  text-[#ffffff]  px-0 ">
-      <motion.h2 {...anim} className=" font-bold text-lg">
+      <h2 className=" font-bold text-lg">
         Միջոցառմանը մնաց
-      </motion.h2>
-      <motion.div {...anim} className="">
+      </h2>
+      <div className="">
         {timeLeft.finished ? (
           <div className="text-white text-2xl font-semibold px-4 bg-red-500 rounded-xl shadow">
             Հարսանիքն արդեն սկսվել է 🎉
@@ -51,7 +50,7 @@ export function TimeBox() {
             <TimeBoxItem label="Վայրկյան" value={timeLeft.seconds} />
           </div>
         )}
-      </motion.div>
+      </div>
     </section>
   );
 }
