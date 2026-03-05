@@ -11,7 +11,7 @@ export default function Home() {
     <div className="max-w-xl m-auto h-screen">
       {/* 1 img */}
       <div
-        className=" min-h-screen gap-50 justify-end max-w-xl m-auto bg-cover font-bold  bg-no-repeat  bg-center  text-[#ffffff] flex flex-col items-center text-center p-8 "
+        className=" min-h-screen gap-50 justify-end max-w-xl m-auto bg-cover font-bold  bg-no-repeat  bg-center  text-[#ffffff] flex flex-col items-center text-center p-8 py-20 "
         style={{
           backgroundImage: "url('/first.jpg')",
         }}
