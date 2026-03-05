@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ժենի և Վլո",
-  description: "Ժենի և Վլո",
+  title: "Լեա և Լեո",
+  description: "Լեա և Լեո",
   openGraph: {
-    title: "Ժենիի և Վլոի հարսանեկան հրավիրատոմս",
+    title: "Լեաի և Լեոի հարսանեկան հրավիրատոմս",
     description: "Best invitation website",
-    url: "https://jeni-vlo.vercel.app",
-    siteName: "Ժենի և Վլո",
+    url: "https://wedding-invitation-2-smoky.vercel.app/",
+    siteName: "Լեա և Լեո",
     images: [
       {
         url: "/first.jpg",
@@ -28,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

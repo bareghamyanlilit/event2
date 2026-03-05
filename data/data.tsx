@@ -18,13 +18,13 @@ export const program = [
     icon: <FaHome />,
     time: "12:00",
     title: "Փեսայի տուն",
-    address: "Բանգլադեշ",
+    address: "Երևան",
   },
   {
     icon: <FaHome />,
     time: "13:00",
     title: "Հարսնացուի տուն",
-    address: "Գեղակերտ",
+    address: "Երևան",
   },
   {
     icon: <FaChurch />,
@@ -36,6 +36,6 @@ export const program = [
     icon: <FaUtensils />,
     time: "17:30",
     title: "Հարսանյաց հանդիսություն",
-    address: "Արև Ռեստորանային Համալիր",
+    address: "Դվին Ռեստորանային Համալիր",
   },
 ];

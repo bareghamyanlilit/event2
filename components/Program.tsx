@@ -10,21 +10,19 @@ export function Program() {
       </motion.h2>
 
       {program.map((item, i) => (
-        <ProgramItem key={i} {...item} />
+        <div
+          className=" bg-cover font-bold  bg-no-repeat  bg-center border-b "
+          style={{
+            backgroundImage: "url('/icon.jpg')",
+          }}
+          key={i}
+        >
+          <ProgramItem {...item} />
+        </div>
       ))}
     </section>
   );
 }
-
-const getMapLink = (address) => {
-  if (address === "Գեղակերտ")
-    return "https://maps.app.goo.gl/BDyxceF5CcrehGZR6";
-
-  if (address === "Բանգլադեշ")
-    return "https://www.google.com/maps/place/40.173432,44.451757";
-
-  return `https://www.google.com/maps/search/${address}`;
-};
 
 const getImage = (title) => {
   if (title === "Պսակադրություն") return "/ekexeci.jpg";
@@ -37,16 +35,22 @@ const ProgramItem = ({ icon, time, title, address }) => {
 
   return (
     <div className="my-8 flex flex-col items-center text-xl">
-      <motion.p {...anim} className="text-4xl">{icon}</motion.p>
-      <motion.p {...anim} className="opacity-80">{time}</motion.p>
+      <motion.p {...anim} className="text-4xl">
+        {icon}
+      </motion.p>
+      <motion.p {...anim} className="opacity-80">
+        {time}
+      </motion.p>
       <motion.h3 {...anim}>{title}</motion.h3>
-      <motion.p {...anim} className="text-sm opacity-80">{address}</motion.p>
+      <motion.p {...anim} className="text-sm opacity-80">
+        {address}
+      </motion.p>
 
-      {img && <img src={img} className="my-2 max-w-full rounded" />}
+      {img && <img src={img} className="my-4 max-w-full rounded" />}
 
       <motion.a
         {...anim}
-        href={getMapLink(address)}
+        href={`https://www.google.com/maps/search/${address}`}
         target="_blank"
         className="inline-flex items-center gap-2 px-4 py-1.5 text-sm"
       >

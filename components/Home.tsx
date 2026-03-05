@@ -17,11 +17,10 @@ export default function Home() {
         }}
       >
         <div>
-
-        <h1 className=" text-shadow-2xs  p-2 rounded-2xl text-4xl md:text-7xl">
-          Ժենի <span className="mx-2">և</span> Վլո
-        </h1>
-        <p>Գեղեցիկ օր և մենք կդառնանք ամուսիններ</p>
+          <h1 className=" text-shadow-2xs  p-2 rounded-2xl text-4xl md:text-7xl">
+            Լեա <span className="mx-2">և</span> Լեո
+          </h1>
+          <p>Գեղեցիկ օր և մենք կդառնանք ամուսիններ</p>
         </div>
         <TimeBox />
       </div>
@@ -36,7 +35,7 @@ export default function Home() {
       </div>
       <Program />
 
-      <Calendar year={2026} month={6} highlightDay={17} />
+      <Calendar year={2026} month={6} highlightDay={12} />
 
       {/* text info */}
       <section className="text-center bg-white text-[#1b1b1b]  px-2 py-8">
