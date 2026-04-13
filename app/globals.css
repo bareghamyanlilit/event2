@@ -11,3 +11,7 @@ body {
 .saveTheDate {
   font-family: cursive;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
