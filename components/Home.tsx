@@ -1,7 +1,7 @@
 "use client";
 import { Calendar } from "../components/calendar";
 import { motion } from "framer-motion";
-import { anim } from "@/data/data";
+import { anim, day, names, txt1, txt2Descr, txt2Title, txt3 } from "@/data/data";
 import { Program } from "@/components/Program";
 import { TimeBox } from "@/components/TimeBox";
 import { Footer } from "./footer";
@@ -40,30 +40,29 @@ export default function Home() {
       >
         <div>
           <h1 className=" text-shadow-2xs  p-2 rounded-2xl text-4xl md:text-7xl">
-            Լեա <span className="mx-2">և</span> Լեո
+            {names[0]}
           </h1>
-          <p>Գեղեցիկ օր և մենք կդառնանք ամուսիններ</p>
+          <p>{txt1}</p>
         </div>
         <TimeBox />
       </div>
 
       <div className=" flex flex-col gap-5 text-center text-[#1b1b1b]  px-6 py-10">
         <motion.h2 {...anim} className=" font-bold text-lg">
-          Սիրելի՛ ընկերներ և բարեկամներ
+          {txt2Title}
         </motion.h2>
         <motion.p {...anim} className=" text-base  opacity-90">
-          Սիրով հրավիրում ենք Ձեզ մասնակցելու մեր կյանքի կարևոր և հիշարժան օրվան
+          {txt2Descr}
         </motion.p>
       </div>
       <Program />
 
-      <Calendar year={2026} month={6} highlightDay={22} />
+      <Calendar year={day[2]} month={day[1]} highlightDay={day[0]} />
 
       {/* text info */}
       <section className="text-center bg-white text-[#1b1b1b]  px-2 py-8">
         <motion.h2 {...anim} className="my-4 font-bold text-base">
-          Խնդրում ենք նախապես տեղեկացնել Ձեր մասնակցության մասին մինչև Մայիսի
-          15-ը
+          {txt3}
         </motion.h2>
       </section>
 

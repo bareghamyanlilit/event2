@@ -1,17 +1,12 @@
 import { FaChurch, FaHome, FaUtensils } from "react-icons/fa";
+export const day=[25,8,2026]
+export const theWeddingDate = new Date("2026-06-17T12:00:00");
 
-export const anim: any = {
-  initial: { opacity: 0, y: 10 },
-  whileInView: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: "easeIn",
-    },
-  },
-  viewport: { once: true },
-};
+export const names=["Լեա և Լեո"]
+export const txt1="Գեղեցիկ օր և մենք կդառնանք ամուսիններ"
+export const txt2Title="Սիրելի՛ ընկերներ և բարեկամներ"
+export const txt2Descr="Սիրով հրավիրում ենք Ձեզ մասնակցելու մեր կյանքի կարևոր և հիշարժան օրվան"
+export const txt3="Խնդրում ենք նախապես տեղեկացնել Ձեր մասնակցության մասին մինչև Մայիսի 15-ը"
 
 export const program = [
   {
@@ -39,3 +34,23 @@ export const program = [
     address: "Դվին Ռեստորանային Համալիր",
   },
 ];
+
+export const programImgs=['/ekexeci.jpg','/restoran.jpg']
+
+export const phones=['Լեա','098 76 54 32','tel:+37400000000','Լեո','098 76 54 32','tel:+37400000000']
+
+
+
+
+export const anim: any = {
+  initial: { opacity: 0, y: 10 },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeIn",
+    },
+  },
+  viewport: { once: true },
+};

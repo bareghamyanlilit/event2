@@ -1,10 +1,10 @@
-import { anim } from "@/data/data";
+import { anim, theWeddingDate } from "@/data/data";
 import { useEffect, useState } from "react";
 
-const weddingDate: any = new Date("2026-06-17T12:00:00");
+const weddingDate: any = theWeddingDate;
 
 export function TimeBox() {
-  const [timeLeft, setTimeLeft] = useState({
+  const [timeLeft, setTimeLeft] : any= useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -18,15 +18,22 @@ export function TimeBox() {
       const diff = weddingDate - now;
 
       if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
+
         setTimeLeft({
-          days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((diff / 1000 / 60) % 60),
-          seconds: Math.floor((diff / 1000) % 60),
+          days: pad(days),
+          hours: pad(hours),
+          minutes: pad(minutes),
+          seconds: pad(seconds),
           finished: false,
         });
       } else {
-        setTimeLeft((prev) => ({ ...prev, finished: true }));
+        setTimeLeft((prev: any) => ({ ...prev, finished: true }));
       }
     }, 1000);
 
@@ -39,7 +46,7 @@ export function TimeBox() {
       </h2>
       <div className="">
         {timeLeft.finished ? (
-          <div className="text-white text-2xl font-semibold px-4 bg-red-500 rounded-xl shadow">
+          <div className="text-black text-2xl font-semibold px-4  rounded-xl shadow">
             Հարսանիքն արդեն սկսվել է 🎉
           </div>
         ) : (

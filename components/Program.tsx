@@ -1,4 +1,4 @@
-import { anim, program } from "@/data/data";
+import { anim, program, programImgs } from "@/data/data";
 import { motion } from "framer-motion";
 import { FaMapMarkedAlt } from "react-icons/fa";
 
@@ -22,8 +22,8 @@ export function Program() {
 }
 
 const getImage = (title) => {
-  if (title === "Պսակադրություն") return "/ekexeci.jpg";
-  if (title === "Հարսանյաց հանդիսություն") return "/restoran.jpg";
+  if (title === "Պսակադրություն") return programImgs[0];
+  if (title === "Հարսանյաց հանդիսություն") return programImgs[1];
   return null;
 };
 
