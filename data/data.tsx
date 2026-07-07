@@ -1,7 +1,7 @@
 import { FaChurch, FaHome, FaUtensils } from "react-icons/fa";
 
 export const day=[25,8,2026]
-export const theWeddingDate = new Date("2026-06-17T12:00:00");
+export const theWeddingDate = new Date("2027-06-17T12:00:00");
 
 export const names=["Լեա և Լեո"]
 export const txt1="Գեղեցիկ օր և մենք կդառնանք ամուսիններ"
